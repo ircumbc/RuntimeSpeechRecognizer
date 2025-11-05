@@ -51,11 +51,14 @@ public class RuntimeSpeechRecognizer : ModuleRules
 
 		PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "..", "ThirdParty", "whisper.cpp"));
 
-
 		PublicAdditionalLibraries.Add(Path.Combine(WhisperLibPath, "ggml.lib"));
 		PublicAdditionalLibraries.Add(Path.Combine(WhisperLibPath, "ggml-base.lib"));
 		PublicAdditionalLibraries.Add(Path.Combine(WhisperLibPath, "ggml-cpu.lib"));
 		PublicAdditionalLibraries.Add(Path.Combine(WhisperLibPath, "ggml-vulkan.lib"));
+		
+		RuntimeDependencies.Add(Path.Combine(PluginDirectory, "Binaries", "Win64", "ggml.dll"));
+		RuntimeDependencies.Add(Path.Combine(PluginDirectory, "Binaries", "Win64", "ggml-base.dll"));
+		RuntimeDependencies.Add(Path.Combine(PluginDirectory, "Binaries", "Win64", "ggml-cpu.dll"));
 
 	}
 }
