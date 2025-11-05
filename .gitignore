@@ -2,7 +2,12 @@
 /Intermediate/
 
 # Binary files
-/Binaries/
+/Binaries/*
+!/Binaries/Win64
+/Binaries/Win64/*
+!/Binaries/Win64/ggml.dll
+!/Binaries/Win64/ggml-base.dll
+!/Binaries/Win64/ggml-cpu.dll
 
 # .bin files representing the raw data for the language models as they are too large
 /Content/**/*.bin
